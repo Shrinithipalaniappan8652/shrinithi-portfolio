@@ -12,22 +12,26 @@
       font-family: 'Poppins', sans-serif;
     }
 
+    html, body {
+      height: 100%;
+    }
+
     body {
       background: url('99.jpeg') no-repeat center center/cover;
       min-height: 100vh;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       padding: 40px 20px;
-      overflow: hidden;
       scroll-behavior: smooth;
       position: relative;
+      overflow-y: auto;
     }
 
     /* Gradient overlay */
     body::before {
       content: '';
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
@@ -81,6 +85,20 @@
         transform: translateY(0);
       }
     }
+
+    @media (max-width: 768px) {
+      .about-box {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -98,3 +116,4 @@
   </div>
 </body>
 </html>
+
