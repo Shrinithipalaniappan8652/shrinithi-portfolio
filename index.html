@@ -102,7 +102,7 @@
 
     .info {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       animation: fadeUp 1.5s ease-out forwards;
     }
 
@@ -126,8 +126,7 @@
     }
 
     .button-bar {
-      position: relative;
-      top: 20px; /* Adjust to position buttons directly below the profile image */
+      margin-top: 30px;
       display: flex;
       gap: 20px;
       justify-content: center;
@@ -137,6 +136,7 @@
       backdrop-filter: blur(15px);
       box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
       animation: fadeUp 1.3s ease-out forwards;
+      flex-wrap: wrap;
     }
 
     .button-bar button {
@@ -150,7 +150,6 @@
       background: linear-gradient(45deg, #00b4d8, #00c6ff);
       transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
-      position: relative;
     }
 
     .button-bar button:nth-child(2) {
@@ -174,10 +173,10 @@
       }
 
       .button-bar {
-        top: 350px; /* Adjust position for smaller screens */
-        right: 15px;
         flex-direction: column;
+        align-items: center;
         gap: 10px;
+        margin-top: 20px;
       }
 
       .button-bar button {
@@ -203,7 +202,7 @@
 <body>
   <header>Shrinithi Portfolio</header>
 
-  <div class="profile-pic"></div>
+  <div class="profile-pic" role="img" aria-label="Shrinithi's profile picture"></div>
 
   <div class="info">
     <h2>Hi, I'm Shrinthi</h2>
