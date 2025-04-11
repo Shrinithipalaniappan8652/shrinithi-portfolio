@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shrinithi Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      animation: fadeIn 1.5s ease-in-out;
+      background: linear-gradient(45deg, #f8cdda, #1f2c61, #2a2a72, #009fff);
+      background-size: 400% 400%;
+      animation: gradientAnimation 15s ease infinite;
+      background-attachment: fixed;
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background: linear-gradient(45deg, #f8cdda, #1f2c61, #2a2a72, #009fff);
+      }
+      50% {
+        background: linear-gradient(45deg, #00d2ff, #3a7bd5, #3a6073, #00c3a3);
+      }
+      100% {
+        background: linear-gradient(45deg, #f8cdda, #1f2c61, #2a2a72, #009fff);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    body::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+      backdrop-filter: blur(15px);
+    }
+
+    header {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      position: absolute;
+      top: 50px;
+      animation: fadeInHeader 1.5s ease-in-out;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+
+    @keyframes fadeInHeader {
+      0% { opacity: 0; transform: translateY(-60px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .profile-pic {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      margin-top: 120px;
+      background: url('ss.jpeg') center/cover no-repeat;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      animation: popUp 1.2s ease-out forwards;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    @keyframes popUp {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.1);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+
+    .info {
+      text-align: center;
+      margin-bottom: 40px;
+      animation: fadeUp 1.5s ease-out forwards;
+    }
+
+    .info h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+
+    .info p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-top: 10px;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    }
+
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .button-bar {
+      position: relative;
+      top: 20px; /* Adjust to position buttons directly below the profile image */
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 15px 25px;
+      border-radius: 50px;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+      animation: fadeUp 1.3s ease-out forwards;
+    }
+
+    .button-bar button {
+      padding: 12px 30px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(45deg, #00b4d8, #00c6ff);
+      transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+      position: relative;
+    }
+
+    .button-bar button:nth-child(2) {
+      background: linear-gradient(45deg, #ff4d6d, #ff6b81);
+    }
+
+    .button-bar button:nth-child(3) {
+      background: linear-gradient(45deg, #8338ec, #6a2cfc);
+    }
+
+    .button-bar button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+      background: linear-gradient(45deg, #00b4d8, #00c6ff);
+      text-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        font-size: 2rem;
+      }
+
+      .button-bar {
+        top: 350px; /* Adjust position for smaller screens */
+        right: 15px;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .button-bar button {
+        padding: 10px 20px;
+        font-size: 1rem;
+      }
+
+      .profile-pic {
+        width: 150px;
+        height: 150px;
+      }
+
+      .info h2 {
+        font-size: 1.5rem;
+      }
+
+      .info p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>Shrinithi Portfolio</header>
+
+  <div class="profile-pic"></div>
+
+  <div class="info">
+    <h2>Hi, I'm Shrinthi</h2>
+    <p>Welcome to my portfolio. Explore my creative work and projects!</p>
+  </div>
+
+  <div class="button-bar">
+    <button onclick="window.location.href='about.html'">About</button>
+    <button onclick="window.location.href='projects.html'">Projects</button>
+    <button onclick="window.location.href='contact.html'">Contact</button>
+  </div>
+</body>
+</html>

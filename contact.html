@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Srinithi</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: url('77.jpeg') no-repeat center center/cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      overflow: hidden;
+    }
+
+    .contact-box {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      border-radius: 25px;
+      padding: 50px 70px;
+      color: white;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      width: 90%;
+      max-width: 900px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .contact-item {
+      flex: 1 1 200px;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      padding: 20px;
+      border-radius: 18px;
+      background-color: rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .contact-item:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .icon {
+      font-size: 2.5rem;
+      color: #ff8c00;
+      transition: color 0.3s ease;
+    }
+
+    .contact-item:hover .icon {
+      color: #ff5500;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .text span:first-child {
+      font-weight: bold;
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .text span:last-child {
+      font-size: 1rem;
+      color: #e0e0e0;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      word-break: break-all;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #ff8c00;
+    }
+
+    @media (max-width: 600px) {
+      .contact-box {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 40px;
+      }
+
+      .contact-item {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="contact-box">
+    <div class="contact-item">
+      <i class="fas fa-phone icon"></i>
+      <div class="text">
+        <span>Call</span>
+        <a href="tel:+91 98765 xxxxx">+91 98765 xxxxx</a>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <i class="fas fa-envelope icon"></i>
+      <div class="text">
+        <span>Email</span>
+        <a href="mailto:srinithi8652@mountzion.ac.in">srinithi8652@mountzion.ac.in</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
