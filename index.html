@@ -102,7 +102,7 @@
 
     .info {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
       animation: fadeUp 1.5s ease-out forwards;
     }
 
@@ -126,8 +126,8 @@
     }
 
     .button-bar {
-      margin-top: 30px;
       display: flex;
+      flex-direction: row;
       gap: 20px;
       justify-content: center;
       background: rgba(0, 0, 0, 0.5);
@@ -136,7 +136,8 @@
       backdrop-filter: blur(15px);
       box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
       animation: fadeUp 1.3s ease-out forwards;
-      flex-wrap: wrap;
+      width: 100%;
+      max-width: 600px; /* Max width for the button container */
     }
 
     .button-bar button {
@@ -177,11 +178,14 @@
         align-items: center;
         gap: 10px;
         margin-top: 20px;
+        width: 100%; /* Ensure buttons fill the available width */
+        padding: 15px; /* Adjust padding for smaller screens */
       }
 
       .button-bar button {
         padding: 10px 20px;
         font-size: 1rem;
+        width: 80%; /* Allow buttons to take full width on smaller screens */
       }
 
       .profile-pic {
